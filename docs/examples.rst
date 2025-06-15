@@ -34,8 +34,7 @@ Example 1: Basic Clustering
        connectivity_matrix,
        regions,
        n_clusters=4,
-       label_interval=10,
-       figsize=(12, 10)
+       label_interval=10
    )
    
    plt.show()
@@ -59,7 +58,6 @@ Example 2: Network Analysis
        cluster_labels,
        threshold=0.7,  # Higher threshold for cleaner network
        show_labels='hubs',
-       node_size_range=(50, 500),
        figsize=(15, 12)
    )
    
@@ -99,8 +97,6 @@ Example 3: Custom Visualization
        region_colors=colors,
        n_clusters=6,
        label_interval=8,
-       cmap='viridis',
-       figsize=(14, 12)
    )
    
    # Create network with custom styling
