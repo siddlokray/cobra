@@ -1,7 +1,7 @@
-CoBrA: Correlation-Based Region Analysis
+CoBRA: Connectivity Brain Regional Analysis
 =========================================
 
-CoBrA is a Python library for correlation-based region analysis, providing tools for clustering, visualization, and network analysis of connectivity data.
+CoBRA is a Python library for correlation-based region analysis, providing tools for clustering, visualization, and network analysis of connectivity data.
 
 .. toctree::
    :maxdepth: 2
@@ -40,7 +40,7 @@ Quick Example
 Installation
 ------------
 
-Install CoBrA using pip:
+Install CoBRA using pip:
 
 .. code-block:: bash
 
