@@ -3,7 +3,7 @@ import sys
 sys.path.insert(0, os.path.abspath('..'))
 
 # Project information
-project = 'CoBrA'
+project = 'CoBRA'
 copyright = '2025, Siddharth Lokray'
 author = 'Siddharth Lokray'
 release = '0.1.2'
