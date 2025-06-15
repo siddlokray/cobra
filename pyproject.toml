@@ -52,7 +52,7 @@ Repository = "https://github.com/siddlokray/cobra.git"
 "Bug Tracker" = "https://github.com/siddlokray/cobra/issues"
 
 [tool.setuptools_scm]
-write_to = "CoBrA/_version.py"
+write_to = "cobra/_version.py"
 
 [tool.black]
 line-length = 88
