@@ -6,8 +6,8 @@ sys.path.insert(0, os.path.abspath('..'))
 project = 'CoBRA'
 copyright = '2025, Siddharth Lokray'
 author = 'Siddharth Lokray'
-release = '0.1.2'
-version = '0.1.2'
+release = '1.0.0'
+version = '1.0.0'
 
 # Extensions
 extensions = [
