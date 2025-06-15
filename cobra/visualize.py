@@ -1,3 +1,10 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import networkx as nx
+from matplotlib.patches import Patch
+import matplotlib.patches as mpatches
+from matplotlib.colors import LinearSegmentedColormap
+
 def make_network_graph(connectivity_matrix, regions, cluster_labels,
                       threshold=0.5, figsize=(14, 10), save_path=None,
                       layout_type='spring', show_labels='selective',
