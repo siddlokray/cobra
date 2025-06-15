@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cobra"
+name = "cobra-brain"
 dynamic = ["version"]
 description = "A Python library for brain connectivity analysis and visualization"
 readme = "README.md"
