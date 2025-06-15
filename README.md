@@ -1,4 +1,4 @@
-# CoBrA: Cortical Brain Region Analysis
+# CoBRA: Connectivity Brain Regional Analysis
 
 A comprehensive Python library for analyzing cortical brain region connectivity using correlation matrices, hierarchical clustering, and network visualization.
 
@@ -53,11 +53,6 @@ clustering.plot_cluster_summary(regions, cluster_labels)
 - Multiple layout algorithms: spring, circular, force-atlas, kamada-kawai
 - Flexible node coloring: by cluster, degree, betweenness centrality
 - Adjustable edge filtering and styling
-
-### Visualization (`cobra.visualization`)
-- `plot_original_correlation_matrix()`: Display raw correlation matrices
-- Customizable color schemes and labeling options
-- Publication-ready figure generation
 
 ## Advanced Usage
 
@@ -115,7 +110,7 @@ visualization.plot_original_correlation_matrix(
 
 ## Data Format
 
-CoBrA expects:
+CoBRA expects:
 - **Connectivity Matrix**: Square correlation matrix (n_regions × n_regions)
 - **Region Names**: List of strings identifying each brain region
 - **Values**: Correlation coefficients typically range from -1 to 1
@@ -132,11 +127,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Citation
 
-If you use CoBrA in your research, please cite:
+If you use CoBRA in your research, please cite:
 
 ```bibtex
 @software{cobra,
-  title={CoBrA: Cortical Brain Region Analysis},
+  title={CoBRA: Cortical Brain Region Analysis},
   author={Sidd Lokray},
   year={2025},
   url={https://github.com/siddlokray/cobra}
