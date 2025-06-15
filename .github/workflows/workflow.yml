@@ -1,14 +1,13 @@
-name: Publish to TestPyPI
-
+name: Publish to PyPI
 on:
   push:
-    branches: [ main ]
+    tags:
+      - 'v*'  # Only publish when version tags are pushed
   workflow_dispatch:
-
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: cobra-brain-test
+    environment: cobra-brain-prod  # Change environment name for production
     
     permissions:
       id-token: write
@@ -30,8 +29,7 @@ jobs:
     - name: Build package
       run: python -m build
       
-    - name: Publish to TestPyPI
+    - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        repository-url: https://test.pypi.org/legacy/
         verbose: true
