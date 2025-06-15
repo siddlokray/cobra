@@ -4,7 +4,7 @@ Installation
 Requirements
 ------------
 
-CoBrA requires Python 3.7 or later and the following dependencies:
+CoBRA requires Python 3.7 or later and the following dependencies:
 
 * numpy
 * matplotlib
@@ -15,7 +15,7 @@ CoBrA requires Python 3.7 or later and the following dependencies:
 Installing from PyPI
 -------------------
 
-The easiest way to install CoBrA is using pip:
+The easiest way to install CoBRA is using pip:
 
 .. code-block:: bash
 
@@ -24,7 +24,7 @@ The easiest way to install CoBrA is using pip:
 Installing from Source
 --------------------
 
-You can also install CoBrA directly from the GitHub repository:
+You can also install CoBRA directly from the GitHub repository:
 
 .. code-block:: bash
 
@@ -35,7 +35,7 @@ You can also install CoBrA directly from the GitHub repository:
 Development Installation
 ----------------------
 
-If you want to contribute to CoBrA, install it in development mode:
+If you want to contribute to CoBRA, install it in development mode:
 
 .. code-block:: bash
 
@@ -43,4 +43,4 @@ If you want to contribute to CoBrA, install it in development mode:
    cd cobra
    pip install -e ".[dev]"
 
-This will install CoBrA along with additional development dependencies.
+This will install CoBRA along with additional development dependencies.
