@@ -12,7 +12,7 @@ __description__ = "Cortical Brain Region Analysis toolkit"
 
 # Import main modules
 from . import cluster
-from . import visualize
+from . import network
 
 # Import key functions for direct access
 from .cluster import (
@@ -25,7 +25,7 @@ from .cluster import (
     prepare_clustering_data
 )
 
-from .visualize import (
+from .network import (
     make_network_graph
 )
 
