@@ -16,22 +16,20 @@ from . import visualization
 from . import network
 
 # Import key functions for direct access
-from .clustering import (
+from .cluster import (
     prepare_clustering_data,
     create_clustered_correlation_matrix,
     create_main_clustering_visualization,
     plot_cluster_summary,
     analyze_clusters,
-    generate_example_colors
+    generate_example_colors,
+    prepare_clustering_data
 )
 
-from .visualization import (
-    plot_original_correlation_matrix
-)
-
-from .network import (
+from .visualize import (
     make_network_graph
 )
+
 
 # Define what's available when using "from cobra import *"
 __all__ = [
