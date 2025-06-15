@@ -1,7 +1,7 @@
 Quick Start
 ===========
 
-This guide will help you get started with CoBrA quickly.
+This guide will help you get started with CoBRA quickly.
 
 Basic Usage
 -----------
