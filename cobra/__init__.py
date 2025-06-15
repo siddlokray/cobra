@@ -11,9 +11,8 @@ __email__ = "siddharthlokray@gmail.com"
 __description__ = "Cortical Brain Region Analysis toolkit"
 
 # Import main modules
-from . import clustering
-from . import visualization
-from . import network
+from . import cluster
+from . import visualize
 
 # Import key functions for direct access
 from .cluster import (
