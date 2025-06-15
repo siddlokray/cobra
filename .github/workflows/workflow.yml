@@ -2,13 +2,17 @@ name: Publish to TestPyPI
 
 on:
   push:
-    branches: [ main ]  # or master, depending on your default branch
-  workflow_dispatch:  # Allows manual triggering
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: cobra-brain-test  # This matches your environment name
+    environment: cobra-brain-test
+    
+    permissions:
+      id-token: write
+      contents: read
     
     steps:
     - uses: actions/checkout@v4
