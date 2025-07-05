@@ -6,7 +6,7 @@ import matplotlib.patches as mpatches
 from matplotlib.colors import LinearSegmentedColormap
 
 def make_network_graph(connectivity_matrix, regions, cluster_labels,
-                      threshold=0.5, figsize=(14, 10), save_path=None,
+                      threshold=0.5, n_interations=100, figsize=(14, 10), save_path=None,
                       layout_type='spring', show_labels='selective',
                       node_colors=None, color_by='cluster', cleanliness=None,
                       orientation='horizontal'):
@@ -23,6 +23,8 @@ def make_network_graph(connectivity_matrix, regions, cluster_labels,
         Cluster assignments for each region
     threshold : float, default=0.5
         Minimum correlation strength to show (higher = less crowded)
+    n_interations : int, default=100
+        Interations to minimize net "force"
     figsize : tuple, default=(14, 10)
         Figure size (width, height)
     save_path : str, optional
@@ -100,15 +102,15 @@ def make_network_graph(connectivity_matrix, regions, cluster_labels,
 
     # Choose layout - use original parameters for consistency
     if layout_type == 'spring':
-        pos = nx.spring_layout(G, k=2, iterations=200, seed=42)
+        pos = nx.spring_layout(G, k=2, iterations=n_interations, seed=42)
     elif layout_type == 'circular':
         pos = nx.circular_layout(G)
     elif layout_type == 'kamada_kawai':
         pos = nx.kamada_kawai_layout(G)
     elif layout_type == 'force_atlas':
-        pos = nx.spring_layout(G, k=3, iterations=100, seed=42, weight='weight')
+        pos = nx.spring_layout(G, k=3, iterations=n_interations, seed=42, weight='weight')
     else:  # default to spring with original parameters
-        pos = nx.spring_layout(G, k=2, iterations=500, seed=42)
+        pos = nx.spring_layout(G, k=2, iterations=n_interations, seed=42)
 
     # Apply orientation transformation
     if orientation == 'vertical':
