@@ -183,6 +183,8 @@ make_network_graph
    :type cluster_labels: array
    :param threshold: Minimum correlation strength to display
    :type threshold: float, optional
+   :param n_interations: Interations to minimize net "force"
+   :type n_interations: int, optionl
    :param figsize: Figure size (width, height)
    :type figsize: tuple, optional
    :param save_path: Path to save the figure
@@ -300,6 +302,7 @@ Advanced Customization
        regions,
        cluster_labels,
        threshold=0.6,
+       n_interations=200,
        layout_type='spring',
        show_labels='all',
        node_colors=custom_colors,
