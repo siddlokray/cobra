@@ -8,7 +8,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="cobra-brain",
-    version="1.0.2",
+    version="1.0.1",
     author="Sidd Lokray",
     author_email="siddharthlokray@gmail.com",
     description="A Python library for brain connectivity analysis and visualization",
