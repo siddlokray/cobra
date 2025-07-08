@@ -193,6 +193,8 @@ make_network_graph
    :type layout_type: str, optional
    :param show_labels: Label display mode
    :type show_labels: str, optional
+   :param top_n_labels: Top n labels
+   :type top_n_labels: int, optional
    :param node_colors: Custom node colors
    :type node_colors: dict, list, or None, optional
    :param color_by: Node coloring scheme
@@ -215,7 +217,7 @@ make_network_graph
 
    * ``'all'`` -- Show all region labels with intelligent abbreviation
    * ``'selective'`` -- Show labels for high-degree nodes (top 20%)
-   * ``'hubs'`` -- Show labels for top 10 hub nodes only
+   * ``'top_n'`` -- Show labels for top n hub nodes only
    * ``'none'`` -- No labels displayed
 
    **Node Coloring Schemes:**
