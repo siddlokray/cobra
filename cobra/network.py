@@ -7,7 +7,7 @@ from matplotlib.colors import LinearSegmentedColormap
 
 def make_network_graph(connectivity_matrix, regions, cluster_labels,
                       threshold=0.5, n_interations=100, figsize=(14, 10), save_path=None,
-                      layout_type='spring', show_labels='selective',
+                      layout_type='spring', show_labels='selective', top_n_labels=10
                       node_colors=None, color_by='cluster', cleanliness=None,
                       orientation='horizontal'):
     """
@@ -32,7 +32,9 @@ def make_network_graph(connectivity_matrix, regions, cluster_labels,
     layout_type : str, default='spring'
         Layout algorithm: 'spring', 'circular', 'force_atlas', or 'kamada_kawai'
     show_labels : str, default='selective'
-        Label display: 'all', 'selective', 'hubs', or 'none'
+        Label display: 'all', 'selective', 'top_n', or 'none'
+    top_n_labels : int, default=10
+        Top n labels displayed if show_labels='top_n'
     node_colors : dict, list, or None
         Custom colors for nodes. Can be:
         - dict: {region_name: color} for specific regions
@@ -291,13 +293,12 @@ def make_network_graph(connectivity_matrix, regions, cluster_labels,
                                        facecolor="white", alpha=0.8),
                                ax=ax)
 
-    elif show_labels == 'hubs':
-        # Show only the top hub nodes
+    elif show_labels == 'top_n':
         degrees = dict(G.degree())
-        top_hubs = sorted(degrees.items(), key=lambda x: x[1], reverse=True)[:10]
+        top_n_regions = sorted(degrees.items(), key=lambda x: x[1], reverse=True)[:top_n_labels]
 
         labels_to_show = {}
-        for node, degree in top_hubs:
+        for node, degree in top_n_regions:
             if show_hemisphere:
                 if node.startswith('lh_'):
                     clean_name = 'L-' + node[3:].replace('_', ' ')
@@ -313,9 +314,9 @@ def make_network_graph(connectivity_matrix, regions, cluster_labels,
             labels_to_show[node] = clean_name
 
         nx.draw_networkx_labels(G, pos, labels_to_show,
-                               font_size=9, font_weight='bold',
-                               bbox=dict(boxstyle="round,pad=0.3",
-                                       facecolor="yellow", alpha=0.7),
+                               font_size=8, font_weight='bold',
+                               bbox=dict(boxstyle="round,pad=0.2",
+                                       facecolor="lightblue", alpha=0.8),
                                ax=ax)
 
     # Create comprehensive legend
