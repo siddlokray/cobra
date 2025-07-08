@@ -144,4 +144,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Support
 
-For questions and issues, please open an issue on GitHub or contact [siddharthlokray@dgmail.com].
+For questions and issues, please open an issue on GitHub or contact [siddharthlokray@gmail.com].
