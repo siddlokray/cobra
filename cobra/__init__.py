@@ -5,7 +5,7 @@ A comprehensive Python library for analyzing cortical brain connectivity
 through correlation matrices, hierarchical clustering, and network visualization.
 """
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __author__ = "Sidd Lokray"
 __email__ = "siddharthlokray@gmail.com"
 __description__ = "Cortical Brain Region Analysis toolkit"
