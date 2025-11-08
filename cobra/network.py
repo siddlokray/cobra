@@ -7,7 +7,7 @@ from matplotlib.colors import LinearSegmentedColormap
 
 def make_network_graph(connectivity_matrix, regions, cluster_labels,
                       threshold=0.5, n_interations=100, figsize=(14, 10), save_path=None,
-                      layout_type='spring', show_labels='selective', top_n_labels=10
+                      layout_type='spring', show_labels='selective', top_n_labels=10,
                       node_colors=None, color_by='cluster', cleanliness=None,
                       orientation='horizontal'):
     """
